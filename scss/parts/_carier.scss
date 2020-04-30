@@ -1,0 +1,298 @@
+/* Вакансии */
+.carier {
+  &-item {
+    border: 1px solid $blue_lighter;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    padding: 29px 34px;
+    background-color: $blue_lightest;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+    &:hover {
+      background: $blue_lighter;
+    }
+
+    &-content {
+      padding-right: 20px;
+    }
+
+    &-btn {
+      margin-left: auto;
+    }
+
+    .h3 {
+      position: relative;
+      margin: 0 0 14px;
+      color: $black;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: $blue_light;
+
+
+      p {
+        font-weight: 500;
+        margin-bottom: 0;
+
+        &:not(:first-child) {
+          padding-left: 46px;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: #518AE6;
+            display: block;
+            left: 21px;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-wide-section {
+  &.-carier {
+    background-image: url(../img/carier/top-carier.jpg);
+  }
+}
+
+/* Вакансии - Страница вакансии*/
+.section-back-link {
+  font-size: 16px;
+  line-height: 24px;
+
+  a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: $blue_light;
+    text-decoration: none;
+    border: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    &:hover {
+      span {
+        border-color: $blue_light;
+      }
+    }
+
+    svg {
+      margin-right: 16px;
+      width: 14px;
+      height: 14px;
+      color: $blue_light;
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    span {
+      -webkit-transition: 0.15s;
+      -o-transition: 0.15s;
+      transition: 0.15s;
+      border-bottom: 1px dashed transparent;
+    }
+  }
+}
+
+.carier-detail {
+  &-section {
+    padding: 27px 0 0;
+
+    & + .simple-section {
+      padding-top: 86px;
+    }
+
+    h1 {
+      margin: 28px 0 42px;
+      line-height: 56px;
+      max-width: 600px;
+    }
+
+    h2 {
+      line-height: 42px;
+      color: $blue;
+      margin: 0 0 55px;
+    }
+
+    h4 {
+      color: $blue_light;
+      margin: 0 0 65px;
+    }
+
+    ul {
+      margin: 0 0 70px;
+
+      & > li {
+        font-size: 16px;
+        margin-bottom: 16px;
+        padding-left: 40px;
+
+        &:before {
+          width: 16px;
+          height: 4px;
+          border-radius: 0;
+          position: absolute;
+          left: 0;
+          top: 10px;
+          background: $blue;
+          -webkit-transform: skewX(-20deg);
+          -ms-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+        }
+      }
+    }
+  }
+
+  &-content {
+    max-width: 850px;
+  }
+}
+
+.pop-carier {
+  .title-form {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
+
+.pop-thanks {
+  h4 {
+    margin: 35px 0 17px;
+  }
+
+  p {
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
+  .carier-section {
+    & + .simple-section {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carier-item-text {
+    display: block;
+
+    p {
+      &:not(:first-child) {
+        padding: 0;
+        margin-top: 4px;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  .banner-wide-section {
+    &.-carier {
+      background-position: 80% center;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner-wide-section {
+    &.-carier {
+      background-image: url(../img/carier/top-carier-mobile.jpg);
+      background-position: 100% center;
+
+      .descr {
+        h1 {
+          margin: 30px 0 100px;
+        }
+      }
+    }
+  }
+  .carier {
+    &-section {
+      padding-bottom: 0;
+
+      & + .simple-section {
+        padding-bottom: 0;
+      }
+    }
+
+    &-item {
+      padding: 19px 16px 21px;
+      margin-bottom: 5px;
+      display: block;
+
+      &-btn {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .carier-detail-section {
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
+      margin: 35px 0 68px;
+    }
+
+    h2 {
+      margin-bottom: 27px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    h4 {
+      margin: -40px 0 50px;
+      font-size: 16px;
+    }
+
+    ul {
+      margin-bottom: 50px;
+
+      & > li {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+    & + .simple-section {
+      padding-top: 18px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .carier-detail-btn {
+    .btn {
+      width: 100%;
+    }
+  }
+}

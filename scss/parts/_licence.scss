@@ -1,0 +1,76 @@
+.licence {
+  &-section {
+    padding: 74px 0 0;
+
+    & + .simple-section {
+      padding-top: 0;
+    }
+  }
+
+  &-item {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    width: 25%;
+
+    a {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      border: none;
+
+      &:hover {
+        .licence-overlay {
+          opacity: 1;
+        }
+      }
+
+      .licence-overlay {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(81, 138, 230, 0.5);
+        border: 6px solid $blue;
+        -webkit-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+        opacity: 0;
+
+        svg {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .licence-item {
+    width: 50%;
+    padding: 0 4px;
+    margin-bottom: 6px;
+  }
+  .licence-list {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+  .licence-section {
+    padding-top: 0;
+
+    & + .simple-section {
+      padding-bottom: 0;
+    }
+  }
+}

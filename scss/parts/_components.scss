@@ -1,0 +1,156 @@
+/* Хлебные крошки */
+.breadcrumbs {
+  position: relative;
+  z-index: 1;
+
+  &.-invert {
+    ul > li span {
+      color: $white;
+    }
+  }
+
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 0;
+
+    & > li {
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:after {
+        content: "-";
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+        color: $gray;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      a {
+        color: $gray;
+        text-decoration: none;
+        border-color: transparent;
+        border-style: dashed;
+        font-weight: 500;
+
+        &:hover {
+          border-color: $gray;
+        }
+      }
+
+      span {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.img-wrap {
+  margin-bottom: 43px;
+  display: inline-block;
+  vertical-align: top;
+
+  img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  small {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray;
+    display: block;
+  }
+}
+
+.video {
+  &-wrap {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  &-btn {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 100px;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: $white;
+    border-radius: 50%;
+
+    svg {
+      width: 20px;
+      height: 24px;
+    }
+  }
+}
+
+.block-quote {
+  background: $blue_lightest;
+  border: 1px solid #EEF7FE;
+  padding: 104px 102px 85px;
+  position: relative;
+  margin: 96px 0 102px;
+
+  svg {
+    position: absolute;
+    top: 58px;
+    right: 43px;
+    width: 42px;
+    height: 35px;
+  }
+
+  h2 {
+    line-height: 42px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  small {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $blue_light;
+    margin-top: 78px;
+    display: block;
+  }
+}
+
+.flex-dynamic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
